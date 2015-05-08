@@ -3,3 +3,5 @@ git:
   path: github.com/choffmeister/drone-test
 script:
   - apt-get update
+  - apt-get install --yes git-core
+  - ls -al
