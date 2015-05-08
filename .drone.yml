@@ -8,7 +8,7 @@ script:
 publish:
   docker:
     image_name: drone-test
-    docker_host: $DOCKER_HOST
+    docker_host: $DOCKER_HOST2
     docker_version: 1.6.0
     registry_login: true
     registry_login_url: $REGISTRY_URL
