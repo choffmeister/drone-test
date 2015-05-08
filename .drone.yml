@@ -5,6 +5,7 @@ script:
   - apt-get update
   - apt-get install sudo
   - npm install
+  - curl $REGISTRY_URL
 publish:
   docker:
     image_name: drone-test
