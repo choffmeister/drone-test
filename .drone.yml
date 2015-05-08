@@ -11,7 +11,7 @@ publish:
     docker_host: tcp://unity-01.epages.com:2375
     docker_version: 1.6.0
     registry_login: true
-    registry_login_url: http://unity-01.epages.com:5000/v2/
+    registry_login_url: http://unity-01.epages.com:5000/v1/
     # username: $REGISTRY_USER
     # password: $REGISTRY_PASS
     tags: [$(git rev-parse --short HEAD)]
