@@ -11,8 +11,10 @@ publish:
     image_name: choffmeister/drone-test
     docker_host: $DOCKER_HOST
     docker_version: 1.6.0
-    registry_login: false
     registry_login_url: $REGISTRY_URL
+    registry_login: false
+    username: $REGISTRY_USER
+    password: $REGISTRY_PASS
     tags: [$DRONE_BRANCH, $(git rev-parse --short HEAD)]
     force_tags: true
     keep_build: false
