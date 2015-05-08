@@ -11,7 +11,7 @@ publish:
     image_name: choffmeister/drone-test
     docker_host: $DOCKER_HOST
     docker_version: 1.6.0
-    registry_login: false
+    registry_login: true
     registry_login_url: $REGISTRY_URL
     # username: $REGISTRY_USER
     # password: $REGISTRY_PASS
