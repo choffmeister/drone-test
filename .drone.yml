@@ -14,7 +14,7 @@ publish:
     registry_login_url: $REGISTRY_URL
     username: $REGISTRY_USER
     password: $REGISTRY_PASS
-    tags: [$(git rev-parse --short HEAD)]
+    tags: [$DRONE_BRANCH, $(git rev-parse --short HEAD)]
     force_tags: true
     keep_build: false
 
