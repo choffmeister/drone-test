@@ -1,7 +1,6 @@
-image: ubuntu:14.04
+image: node:0.12
 git:
   path: github.com/choffmeister/drone-test
 script:
-  - apt-get update
-  - apt-get install --yes git-core
-  - ls -al
+  - npm install
+  - npm test
