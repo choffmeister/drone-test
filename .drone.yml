@@ -3,4 +3,14 @@ git:
   path: github.com/choffmeister/drone-test
 script:
   - npm install
-  - npm test
+publish:
+  docker:
+    image_name: drone-test
+    registry_login: true
+    registry_login_url: http://unity-01.epages.com/v2/
+    # username: $REGISTRY_USER
+    # password: $REGISTRY_PASS
+    tags: [$(git rev-parse --short HEAD)]
+    force_tags: true
+    keep_build: false
+
