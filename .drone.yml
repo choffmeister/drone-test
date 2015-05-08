@@ -8,7 +8,7 @@ script:
 publish:
   docker:
     image_name: drone-test
-    docker_host: tcp://0.0.0.0:2375
+    docker_host: tcp://unity-01.epages.com:2375
     docker_version: 1.6.0
     registry_login: true
     registry_login_url: http://unity-01.epages.com/v2/
