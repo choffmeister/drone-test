@@ -5,3 +5,16 @@ steps:
     image: docker.pkg.airfocus.dev/airfocus/airfocus-ci
     commands:
       - printenv
+
+---
+
+kind: pipeline
+name: deploy
+steps:
+  - name: environment
+    image: docker.pkg.airfocus.dev/airfocus/airfocus-ci
+    commands:
+      - echo "DEPLOY"
+when:
+  event:
+    - promote
