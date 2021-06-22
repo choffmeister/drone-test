@@ -5,6 +5,9 @@ steps:
     image: docker.pkg.airfocus.dev/airfocus/airfocus-ci
     commands:
       - printenv
+trigger:
+  event:
+    - push
 
 ---
 
