@@ -1,21 +1,7 @@
-image: node:0.12
-
-git:
-  path: github.com/choffmeister/drone-test
-
-script:
-  - apt-get update
-  - apt-get install sudo
-  - npm install
-
-publish:
-  docker:
-    docker_host: $DOCKER_HOST
-    docker_version: 1.6.0
-
-    image_name: vm-unity.intern.epages.de:5000/choffmeister/drone-test
-    tags: [$DRONE_BRANCH, $(git rev-parse --short HEAD)]
-
-    force_tags: true
-    keep_build: false
-
+kind: pipeline
+name: default
+steps:
+  - name: environment
+    image: docker.pkg.airfocus.dev/airfocus/airfocus-ci
+    commands:
+      - printenv
