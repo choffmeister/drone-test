@@ -15,7 +15,7 @@ steps:
     image: docker.pkg.airfocus.dev/airfocus/airfocus-ci
     commands:
       - echo "DEPLOY"
-when:
+trigger:
   event:
     - promote
     - tag
